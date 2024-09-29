@@ -5,7 +5,7 @@ import Home from "./Components/Home";
 import About from "./Components/About";
 import Contact from "./Components/Contact";
 import User from "./Components/User";
-import Github from "./Components/Github";
+import Github , {githubLoader} from "./Components/Github";
 
 // const router = createBrowserRouter([
 //   { path: "/", element: <RootLayout /> , children: [
@@ -22,7 +22,7 @@ const router = createBrowserRouter(
      <Route path= 'about' element={<About />} />
      <Route path= 'contact' element={<Contact />} />
      <Route path= "user/:userId" element={<User />} />
-     <Route path = "github" element={<Github />} />
+     <Route path = "github" loader={githubLoader} element={<Github />} />
    </Route>
   )
 );
